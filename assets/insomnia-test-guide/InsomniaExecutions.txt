@@ -1,0 +1,50 @@
+// createThought POST /api/thoughts
+// Worked once below for Peter
+// It did not work for other users
+
+{
+	"thought": {
+		"thoughtText": "The MVC topic was the first fullstack exercise",
+		"username": "Peter",
+		"_id": "66ccbc77426aee02ab217575",
+		"createdAt": "August 26th, 2024 at 10:33 AM",
+		"reactions": [],
+		"__v": 0,
+		"reactionCount": 0
+	},
+	"user": {
+		"_id": "66ccbbbf426aee02ab217571",
+		"username": "Peter",
+		"email": "peter@outlook.com",
+		"thoughts": [
+			"66ccbc77426aee02ab217575"
+		],
+		"friends": [],
+		"__v": 0,
+		"friendcount": 0
+	}
+}
+// It worked twice for Peter
+{
+	"thought": {
+		"thoughtText": "The MVC topic was the first fullstack exercise #2",
+		"username": "Peter",
+		"_id": "66ccc20e8163a592275a18b6",
+		"createdAt": "August 26th, 2024 at 10:57 AM",
+		"reactions": [],
+		"__v": 0,
+		"reactionCount": 0
+	},
+	"user": {
+		"_id": "66ccbbbf426aee02ab217571",
+		"username": "Peter",
+		"email": "peter@outlook.com",
+		"thoughts": [
+			"66ccbc77426aee02ab217575",
+			"66ccc20e8163a592275a18b6"
+		],
+		"friends": [],
+		"__v": 0,
+		"friendcount": 0
+	}
+}
