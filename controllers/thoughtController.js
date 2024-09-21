@@ -92,7 +92,7 @@ module.exports = {
 
     console.log('---> Inside route removeThought: DELETE /api/thoughts/:thoughtId');
     try {
-      const thought = await Thought.findOneAndRemove({ _id: req.params.thoughtId });
+      const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
 
       if (!thought) {
         return res.status(404).json({ message: 'No thought with this id to delete!' });
