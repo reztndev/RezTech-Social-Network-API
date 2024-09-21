@@ -51,12 +51,13 @@ module.exports = {
       );
 
       if (!user) {
-        console.log(`---> User (${username}) not found to associate with newly created thought (${thought})`);
+        console.log(`---> User (${req.body.username}) not found to associate with newly created thought (${thought})`);
+
         return res.status(404).json({ message: 'User not found to associate with new thought' });
       }
 
       res.status(200).json({ thought, user });
-      console.log(`---> Created a new thought. thought: ${thought}, user: ${username}`); 
+      console.log(`---> Created a new thought. thought: ${thought}, user: ${req.body.username}`);
     } catch (err) {
       console.log('---> Error creating thought');
       console.error(err);
@@ -79,7 +80,7 @@ module.exports = {
       }
 
       res.json(thought);
-      console.log(`---> Updated a thought. thoughtId: ${_id}, thought: ${thought}`);
+      console.log(`---> Updated a thought. thoughtId: ${req.params.thoughtId}, thought: ${thought}`);
     } catch (err) {
       console.log('---> Error updating thought');
       console.error(err);
