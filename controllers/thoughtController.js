@@ -98,6 +98,13 @@ module.exports = {
         return res.status(404).json({ message: 'No thought with this id to delete!' });
       }
 
+      // Remove the thought ID from the user's thoughts array
+      await User.findOneAndUpdate(
+        { thoughts: req.params.thoughtId },
+        { $pull: { thoughts: req.params.thoughtId } },
+        { new: true }
+      );
+
       res.json({ message: 'Thought deleted!' });
       console.log(`---> Deleted a thought. thoughtId: ${req.params.thoughtId}, thought: ${thought}`);
     } catch (err) {
