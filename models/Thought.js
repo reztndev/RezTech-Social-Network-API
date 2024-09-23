@@ -17,8 +17,7 @@ const thoughtSchema = new Schema(
       default: Date.now,
       // Use a getter method to format the timestamp on query
       //get: (timestamp) => dateFormat(timestamp),  
-      //get: (timestamp) => moment(timestamp).format('MMMM Do, YYYY [at] h:mm A'), // Custom getter to format the date
-      get: (timestamp) => moment(timestamp).format('MMM DD, YYYY [at] hh:mm a'),  
+      get: (timestamp) => moment(timestamp).format('MMM DD, YYYY [at] hh:mm a'),  // Custom getter to format the date
     },  
     username: {
       type: String,

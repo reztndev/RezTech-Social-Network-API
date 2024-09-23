@@ -18,14 +18,12 @@ const userSchema = new Schema(
     thoughts: [
       {
         type: Schema.Types.ObjectId,
-        //ref: 'Thought',   // Should this referrence the instance 'thought' instead?
         ref: 'thought',
       },
     ],  
     friends: [
       {
         type: Schema.Types.ObjectId,
-        //ref: 'User',      // Should this referrence the instance 'user' instead?
         ref: 'user',
       },
     ],    
